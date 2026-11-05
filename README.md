@@ -1,8 +1,16 @@
-<img src="WeekNumberTray/icon.png" alt="" width="96" align="right">
-
 # Week Number Tray
 
-Always know what week it is. Week Number Tray shows the current week number as a small icon in the Windows notification area, and one click opens a calendar with week numbers.
+[![Release](https://img.shields.io/github/v/release/kreaton/WeekNumberTray)](https://github.com/kreaton/WeekNumberTray/releases/latest)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+![Windows](https://img.shields.io/badge/platform-Windows-lightgrey)
+![.NET 10](https://img.shields.io/badge/.NET-10-lightgrey)
+![WPF](https://img.shields.io/badge/UI-WPF-lightgrey)
+
+![Week Number Tray: always know what week it is](images/banner.png)
+
+**Always know what week it is.**
+
+Week Number Tray shows the current week number as a small icon in the Windows notification area, and one click opens a calendar with week numbers.
 
 Week numbers follow the ISO 8601 standard used in most of Europe, where weeks start on Monday.
 
