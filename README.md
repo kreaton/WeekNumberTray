@@ -31,6 +31,7 @@ To get a newer version later, click the icon and choose **Check for updates**. T
 - **Change month:** use the arrows in the calendar, the mouse wheel or the keyboard.
 - **Go back to today:** click the "Today" line in the calendar, or press Home.
 - **Start with Windows:** choose **Start with Windows** in the calendar. A check mark shows that it's on.
+- **See the version:** choose **About** in the calendar.
 - **Quit:** choose **Exit** at the bottom of the calendar.
 
 | Key | Action |
@@ -46,7 +47,7 @@ The calendar follows the Windows light or dark setting and your accent color. Th
 
 ## For developers
 
-This is a WPF version, on .NET 10 with the built-in Fluent theme, of the Rust app [WeekNumber](https://github.com/kreaton/WeekNumber). WPF has no tray icon of its own, so it uses the `NotifyIcon` from WinForms. Installs and updates use [Velopack](https://velopack.io).
+This is a WPF version, on .NET 10 with the built-in Fluent theme, of the Rust app [WeekNumber](https://github.com/kreaton/WeekNumber). WPF has no tray icon of its own, so it uses the `NotifyIcon` from WinForms. Installs and updates use [Velopack](https://velopack.io). The app has no settings file: "Start with Windows" is a `WeekNumberTray` value under `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`.
 
 ### Build and run
 
@@ -58,7 +59,7 @@ dotnet run --project WeekNumberTray
 
 ### Releases
 
-Every push to `main` builds the app on GitHub Actions and publishes a new release, one patch version higher than the last (`.github/workflows/release.yml`). To push without releasing, add `[skip ci]` to the commit message. You can also start a release by hand from the repository's Actions tab, or run `WeekNumberTray\BuildRelease.ps1` locally. Add `-LocalOnly` to build without uploading.
+Every push to `main` builds the app on GitHub Actions and publishes a new release, one patch version higher than the last (`.github/workflows/release.yml`). To push without releasing, add `[skip ci]` to the commit message. You can also start a release by hand from the repository's Actions tab, or run `WeekNumberTray\BuildRelease.ps1` locally. Add `-LocalOnly` to build without uploading. The script needs the Velopack `vpk` tool, in the same version as the Velopack package; the comment at the top of the script has the install command.
 
 The repository must stay public, because **Check for updates** reads its releases without logging in.
 
